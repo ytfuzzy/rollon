@@ -3,7 +3,14 @@ let SPACE = 50; // Spacing between Steps
 let steps = [];
 
 function setup() {
-  createCanvas(350,600);
+  createCanvas(windowWidth, windowHeight);
+    function draw() {
+  background(0, 100, 200);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
   ball = new Ball();
   let button = createButton("Play Again");
   button.mouseClicked(reSketch);
